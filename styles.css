@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --Soft-White: rgba(255, 255, 255, 0.8);
+    --Box-Shadow: 0 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-image: url('./images/bg-intro-desktop.png');
+    background-color: var(--Red);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+article {
+    width: 50%;
+    color: white;
+    padding: 2rem;
+    margin: auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1em;
+}
+
+article p {
+    font-weight: 500;
+    margin: 2rem 0;
+    color: var(--Soft-White);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+section p {
+    display: flex;
+    height: 4rem;
+    border-radius: 1rem;
+    box-shadow: var(--Box-Shadow);
+    align-items: center;
+    place-content: center;
+    color: var(--Soft-White);
+    background-color: var(--Blue);
+}
+
+section p span {
+    color: white;
+    font-weight: 600;
+}
+
+.input-bar {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: var(--Box-Shadow);
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.input-content {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Grayish-Blue);
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--Grayish-Blue);
+    font-weight: 600;
+}
+
+input:focus {
+    border: 2px solid var(--Blue);
+}
+
+.input-content img {
+    position: absolute;
+    top: 1.25rem;
+    right: 2rem;
+    display: none;
+}
+
+.input-content .error-info {
+    position: absolute;
+    top: 4.2rem;
+    right: 0;
+    font-size: 0.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--Red);
+    display: none;
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    border-radius: 0.5rem;
+    height: 4rem;
+    background-color: var(--Green);
+    box-shadow: 0 5px rgb(20, 186, 114);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+#button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.attention {
+    margin: 1rem 0;
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+}
+
+.attention span {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+@media screen and (max-width:376px) {
+    body {
+        height: 180vh;
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+
+    main {
+        width: 85%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    article {
+        width: 100%;
+        padding: 0;
+        margin: 3rem auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        width: 100%;
+    }
+
+    section p {
+        padding: 2rem 3rem;
+    }
+
+    section p span {
+        display: contents;
+    }
+
+    input::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
